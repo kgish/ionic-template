@@ -1,0 +1,27 @@
+<app-header [title]="title"></app-header>
+
+<ion-content fullscreen>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Subtitle</ion-card-subtitle>
+            <ion-card-title>Title</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <form [formGroup]="form">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Email</ion-label>
+                        <ion-input formControlName="email" type="email"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Password</ion-label>
+                        <ion-input formControlName="password" type="password"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-button expand="full" [disabled]="form.invalid" (click)="login()">Login</ion-button>
+            </form>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<app-footer></app-footer>
