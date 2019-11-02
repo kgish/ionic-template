@@ -9,7 +9,7 @@ export class UiService {
     constructor(private toastController: ToastController) {
     }
 
-    showToast(message: string, duration: number = 2000) {
+    showToast(message: string, duration: number = 1000) {
         this.toastController.create({
             message,
             duration,
@@ -17,8 +17,7 @@ export class UiService {
             showCloseButton: true,
             closeButtonText: 'OK',
             color: 'success',
-            cssClass: 'toast-message',
-            position: 'top'
+            position: 'bottom'
         }).then(toast => toast.present());
     }
 }
