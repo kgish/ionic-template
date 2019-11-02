@@ -7,14 +7,15 @@
             <ion-card-title>Title</ion-card-title>
         </ion-card-header>
         <ion-card-content>
+            <p>You are required to login first.</p>
             <form [formGroup]="form">
                 <ion-list>
                     <ion-item>
-                        <ion-label>Email</ion-label>
-                        <ion-input formControlName="email" type="email"></ion-input>
+                        <ion-label>Username : </ion-label>
+                        <ion-input formControlName="username" type="text"></ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-label>Password</ion-label>
+                        <ion-label>Password : </ion-label>
                         <ion-input formControlName="password" type="password"></ion-input>
                     </ion-item>
                 </ion-list>

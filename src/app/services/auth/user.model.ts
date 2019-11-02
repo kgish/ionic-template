@@ -1,4 +1,9 @@
+export type Role = 'admin' | 'user' ;
+
 export interface IUser {
-    email: string;
-    name?: string;
+    username: string;
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    role?: Role;
 }

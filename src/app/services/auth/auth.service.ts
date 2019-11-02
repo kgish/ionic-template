@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { Location } from '@angular/common';
-import { IUser } from './user.model';
+import { IUser, Role } from './user.model';
 import { UiService } from '../ui';
 
 @Injectable({
@@ -19,9 +19,9 @@ export class AuthService {
                 private ui: UiService) {
     }
 
-    login(value: { email: string, password: string }) {
-        const { email, password } = value;
-        this.currentUser = { email };
+    login(value: { username: string, password: string }) {
+        const { username, password } = value;
+        this.currentUser = { username, role: 'user' };
         this.currentUserChanged.next(this.currentUser);
         this.router.navigate([ 'home' ]);
         this.ui.showToast('Logged in successfully');

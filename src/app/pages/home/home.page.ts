@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
 
     ngOnInit(): void {
         const currentUser = this.auth.getCurrentUser();
-        this.name = currentUser ? currentUser.name : 'unknown';
+        this.name = currentUser ? (currentUser.firstName || currentUser.username ) : '';
     }
     get title() {
         return 'Home';
