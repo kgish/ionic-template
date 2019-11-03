@@ -9,12 +9,6 @@
         <ion-card-content>
             <p>This is your profile.</p>
             <ion-list>
-                <ion-item *ngIf="currentUser.avatar">
-                    <ion-label>Avatar :</ion-label>
-                    <ion-thumbnail>
-                        <ion-img [src]="currentUser.avatar"></ion-img>
-                    </ion-thumbnail>
-                </ion-item>
                 <ion-item>
                     <ion-label>Username :</ion-label>
                     <ion-input readonly [value]="currentUser.username || 'None'" type="text"></ion-input>
